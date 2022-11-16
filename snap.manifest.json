@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "description": "test desc",
+  "proposedName": "test",
+  "source": {
+    "shasum": "YRLEsZdRqbcTbGJzxxn47nIE7eASZuazNJBVF4sELyQ=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "packageName": "my-app",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "snap_confirm": {}
+  },
+  "manifestVersion": "0.1"
+}
