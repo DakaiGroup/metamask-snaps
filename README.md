@@ -4,7 +4,7 @@ This is a `next.js` app made to showcase some of the basic functionality of Meta
 
 ## Getting Started
 
-Clone the repository by `git clone https://github.com/SticketInya/snap-test.git`
+Clone the repository by `git clone https://github.com/DakaiGroup/metamask-snaps.git`
 
 Install all packages
 
