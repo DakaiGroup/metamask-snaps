@@ -3,7 +3,7 @@
   "description": "test desc",
   "proposedName": "test",
   "source": {
-    "shasum": "YRLEsZdRqbcTbGJzxxn47nIE7eASZuazNJBVF4sELyQ=",
+    "shasum": "EEz17FmhxqJr4UJ4ac7V00VB3wV9+MPUucx4cL7PxuE=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
@@ -13,7 +13,9 @@
     }
   },
   "initialPermissions": {
-    "snap_confirm": {}
+    "snap_confirm": {},
+    "snap_manageState": {},
+    "endowment:network-access": {}
   },
   "manifestVersion": "0.1"
 }

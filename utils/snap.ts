@@ -10,13 +10,18 @@ export const connectWallet = async (snapId: string) =>
     ],
   });
 
-export const invokeSnap = async (snapId: string, method: string) =>
+export const invokeSnap = async (
+  snapId: string,
+  method: string,
+  params: any = {}
+) =>
   await window?.ethereum?.request({
     method: "wallet_invokeSnap",
     params: [
       snapId,
       {
         method,
+        params,
       },
     ],
   });
