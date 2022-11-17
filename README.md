@@ -61,7 +61,7 @@ Sample `snap.manifest.json` file:
   "description": "Your description",
   "proposedName": "Your snap`s name",
   "source": {
-    "shasum": "hash of the package",
+    "shasum": "hash of the package", //Managed and updated by mm-cli
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
@@ -79,7 +79,7 @@ Sample `snap.manifest.json` file:
 
 You can read more about the structure of snaps in the [MetaMask Docs](https://docs.metamask.io/guide/snaps-development-guide.html#the-anatomy-of-a-snap)
 
-#### Add types and typedefinitons
+#### Add types and type definitons
 
 Add the following line to your `tsconfig.json`.
 
@@ -105,7 +105,7 @@ This will tell typescript that there is an `ethereum` object on the `window` glo
 
 #### Scripts
 
-To run both a `next.js developer server` and the `snaps node server` you have to add two simple scripts the `package.json` file.
+To run both a `next.js developer server` and the `snaps node server` you have to add two simple scripts to the `package.json` file.
 
 ```json
 "dev": "next dev & yarn watch",
@@ -166,7 +166,7 @@ const handleConnectMetamask = async () => {
 };
 ```
 
-> Snaps require a reinstall on changes. So when in the future, you make changes to your snap, reconnect and reinstall it for the changes to properly take effect.
+> Snaps require a reinstall on changes. So when, in the future, you make changes to your snap reconnect and reinstall it for the changes to properly take effect.
 
 To create your first method create/navigate to the `packages/snap/src/index.ts` file and paste the following code.
 
