@@ -61,7 +61,7 @@ Sample `snap.manifest.json` file:
   "description": "Your description",
   "proposedName": "Your snap`s name",
   "source": {
-    "shasum": "hash of the package", //Managed and updated by mm-cli
+    "shasum": "hash of the package, managed and updated by mm-cli",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
