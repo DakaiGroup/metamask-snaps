@@ -20,7 +20,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx` and `packages/snap/src/index.ts`
+You can start editing the page by modifying `pages/index.tsx` and `snap/src/index.ts`
 
 ## Start your own project
 

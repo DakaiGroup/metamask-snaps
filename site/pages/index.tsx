@@ -79,7 +79,7 @@ export default function Home() {
           Get started by editing{" "}
           <code className={styles.code}>pages/index.tsx</code>
           {" and "}
-          <code className={styles.code}>packages/snap/src/index.ts</code>
+          <code className={styles.code}>snap/src/index.ts</code>
         </p>
 
         <div className={styles.grid}>
