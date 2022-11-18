@@ -98,7 +98,7 @@ Add the following code to your `package.json`.
   ]
 ```
 
-Create a `global.d.ts` file in your project directory and add the following code:
+Create a `global.d.ts` file in your frontend project directory and add the following code:
 
 ```ts
 import { MetaMaskInpageProvider } from "@metamask/providers";
@@ -114,10 +114,10 @@ This will tell typescript that there is an `ethereum` object on the `window` glo
 
 #### Scripts
 
-To run both a `next.js developer server` and the `snaps node server` you have to add two simple scripts to the `package.json` file.
+To run the `snaps node server` you have to add two simple scripts to the `package.json` file.
 
 ```json
-"dev": "next dev & yarn watch",
+"dev": "yarn watch",
 "watch": "mm-snap watch"
 ```
 
@@ -137,7 +137,7 @@ Snaps communicate with your `dapp` through a protocol called `JSON-RPC`. A `JSON
 
 ### Hello World
 
-To get a basic `hello word` to work, you have to know the `snapId`. Paste the following code to the page of your application to set it dynamically on the first render of the page.
+To get a basic `hello word` to work, you have to know the `snapId`. Paste the following code to the page of your frontend application to set it dynamically on the first render of the page.
 
 ```tsx
 const [snapId, setSnapId] = useState<string>("");
@@ -153,6 +153,8 @@ useEffect(() => {
   setSnapId(id);
 }, []);
 ```
+
+> You need to import the required files from your snaps directory for the dynamic snapId to work. Alternatively you can hardcode it to `local:http://localhost:YOUR_SNAPS_PORT` in local development.
 
 With the `snapId` acquired you can connect the user's metamask wallet to your application. The following code will connect your user and install your snap.
 
@@ -177,7 +179,7 @@ const handleConnectMetamask = async () => {
 
 > Snaps require a reinstall on changes. So when, in the future, you make changes to your snap reconnect and reinstall it for the changes to properly take effect.
 
-To create your first method create/navigate to the `packages/snap/src/index.ts` file and paste the following code.
+To create your first method create/navigate to the `snap/src/index.ts` file and paste the following code.
 
 ```ts
 import { OnRpcRequestHandler } from "@metamask/snap-types";
