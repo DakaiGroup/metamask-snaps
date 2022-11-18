@@ -1,25 +1,13 @@
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
+import { useSnapId } from "../hooks/useSnapId";
 import styles from "../styles/Home.module.css";
-import snapCfg from "../snap.config";
-import snapManifest from "../snap.manifest.json";
 import { connectWallet, invokeSnap } from "../utils/snap";
 
 export default function Home() {
-  const [snapId, setSnapId] = useState<string>("");
   const [todos, setTodos] = useState<{ id: string; todo: string }[]>([]);
   const [todoText, setTodoText] = useState("");
   const [isConnected, setIsConnected] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-    const id =
-      window.location.hostname === "localhost"
-        ? `local:${window.location.protocol}//${window.location.hostname}:${snapCfg.cliOptions.port}`
-        : `npm:${snapManifest.source.location.npm.packageName}`;
-    setSnapId(id);
-  }, []);
+  const snapId = useSnapId();
 
   const handleClick = async () => {
     try {

@@ -3,6 +3,6 @@ module.exports = {
     port: 8082,
     dist: "dist",
     outfileName: "bundle.js",
-    src: "./packages/snap/src/index.ts",
+    src: "src/index.ts",
   },
 };
