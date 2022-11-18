@@ -89,6 +89,15 @@ Add the following line to your `tsconfig.json`.
 
 Without this, typescript won't be able to recognize the `wallet` object provided by `snap-types`.
 
+Add the following code to your `package.json`.
+
+```json
+ "files": [
+    "dist/",
+    "snap.manifest.json"
+  ]
+```
+
 Create a `global.d.ts` file in your project directory and add the following code:
 
 ```ts
