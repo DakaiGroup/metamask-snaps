@@ -1,5 +1,7 @@
 # Metamask Snaps Test
 
+Made by [<img src="https://github.com/DakaiGroup/metamask-snaps/raw/main/dakai-logo.png" height="18" />](https://www.dakai.io/).
+
 This is a `next.js` app made to showcase some of the basic functionality of Metamask Snaps
 
 ## Getting Started
